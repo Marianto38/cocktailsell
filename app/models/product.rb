@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :user
-  belongs_to :ingredient
+  # belongs_to :user
+  has_many :ingredient
 end
