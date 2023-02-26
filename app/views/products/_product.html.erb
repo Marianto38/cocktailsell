@@ -29,14 +29,14 @@
     <%= product.subcategory %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= product.user_id %>
-  </p>
 
-  <p>
-    <strong>Ingredient:</strong>
-    <%= product.ingredient_id %>
-  </p>
+  <p>ingredients</p>
+  <% product.ingredients.all.each do |p|%>
+  <ul>
+    <li>
+      <%= p.name %>
+    </li>
+  </ul>
+  <% end %>
 
 </div>

@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @product.ingredients.new
   end
 
   # GET /products/1/edit
@@ -22,13 +23,15 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
+    @product.save
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to product_url(@product), notice: "Product was successfully created." }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
@@ -65,6 +68,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :category, :recipe, :price, :status, :subcategory, :user_id, :ingredient_id)
+      params.require(:product).permit(:name, :category, :recipe, :price, :status, :subcategory, :user_id, ingredients_attributes: [:id, :name, :_destroy] )
     end
 end

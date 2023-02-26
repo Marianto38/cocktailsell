@@ -5,14 +5,36 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :category %>
+    <%= f.input :category, collection:  Product.categories.keys, prompt: "Choose Category", error: 'Please select one option',
+                    input_html: {class:"border-0 border-bottom border-1 bg-light border-dark"} %>
     <%= f.input :recipe %>
     <%= f.input :price %>
     <%= f.input :status %>
-    <%= f.input :subcategory %>
-    <%# <%= f.association :user %> %>
-    <%= f.association :ingredient %>
-  </div>
+     <%= f.input :subcategory, collection:  Product.subcategories.keys, prompt: "Choose Category", error: 'Please select one option',
+                    input_html: {class:"border-0 border-bottom border-1 bg-light border-dark"} %>
+
+
+
+    <%# f.association :ingredient %>
+
+    <h4>ingredientes</h4>
+    <h4>Tasks</h4>
+      <div data-controller="nested-form">
+        <template data-target="nested-form.template">
+          <%= f.fields_for :ingredients, Ingredient.new, child_index: 'NEW_RECORD' do |ingredient| %>
+            <%= render "ingredient_fields", f: ingredient %>
+          <% end %>
+        </template>
+
+        <%= f.fields_for :ingredients do |ingredient| %>
+          <%= render "ingredient_fields", f: ingredient %>
+        <% end %>
+
+        <div class="mb-3" data-target="nested-form.links">
+          <%= link_to "Add ingredient", "#", class: "btn btn-outline-primary", data: { action: "click->nested-form#add_association" } %>
+        </div>
+      </div>
+
 
   <div class="form-actions">
     <%= f.button :submit %>
