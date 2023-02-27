@@ -4,14 +4,17 @@
 
 import { application } from "./application"
 
+import CarouselController from "./carousel_controller"
+application.register("carousel", CarouselController)
+
+import FormController from "./form_controller"
+application.register("form", FormController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import NestedFormController from "./nested_form_controller"
 application.register("nested-form", NestedFormController)
 
-// import { Application } from '@hotwired/stimulus'
-// import NestedForm from 'stimulus-rails-nested-form'
 
-// const application = Application.start()
-// application.register('nested-form', NestedForm)
+

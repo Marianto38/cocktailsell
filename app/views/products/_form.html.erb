@@ -1,42 +1,104 @@
-
-<%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :category, collection:  Product.categories.keys, prompt: "Choose Category", error: 'Please select one option',
-                    input_html: {class:"border-0 border-bottom border-1 bg-light border-dark"} %>
-    <%= f.input :recipe %>
-    <%= f.input :price %>
-    <%= f.input :status %>
-     <%= f.input :subcategory, collection:  Product.subcategories.keys, prompt: "Choose Category", error: 'Please select one option',
-                    input_html: {class:"border-0 border-bottom border-1 bg-light border-dark"} %>
-
-
-
-    <%# f.association :ingredient %>
-
-    <h4>ingredientes</h4>
-    <h4>Tasks</h4>
-      <div data-controller="nested-form">
-        <template data-target="nested-form.template">
-          <%= f.fields_for :ingredients, Ingredient.new, child_index: 'NEW_RECORD' do |ingredient| %>
-            <%= render "ingredient_fields", f: ingredient %>
-          <% end %>
-        </template>
-
-        <%= f.fields_for :ingredients do |ingredient| %>
-          <%= render "ingredient_fields", f: ingredient %>
-        <% end %>
-
-        <div class="mb-3" data-target="nested-form.links">
-          <%= link_to "Add ingredient", "#", class: "btn btn-outline-primary", data: { action: "click->nested-form#add_association" } %>
+<div class="container col-sm-6 col-md-7">
+  <div class="principal-form"
+    data-controller="form">
+    <div class="container">
+      <!-- <header>Signup Form</header> -->
+      <div class="progress-bar ">
+        <div class="step">
+          <p>
+            Name
+          </p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>
+            Categories
+          </p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>
+            Ingredients
+          </p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>
+            Recipe
+          </p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
         </div>
       </div>
-
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+    </div>
   </div>
-<% end %>
+
+
+
+      <section id="" class="bg-success name">
+        <p> soy la section de la pagina 0 </p>
+        <p> soy la section de la pagina 0 </p>
+        <p> soy la section de la pagina 0 </p>
+        <p> soy la section de la pagina 0 </p>
+        <p> soy la section de la pagina 0 </p>
+        <p> soy la section de la pagina 0 </p>
+
+        <a class="btn btn-primary firstNext next"  href="#paginaUno" role="button">Link a pagina 1</a>
+      </section>
+      <hr>
+
+      <section id="paginaUno" class="bg-success name">
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <p> soy la section de la pagina 1 </p>
+        <a class="btn btn-primary next-1 next"  href="#paginaDos" role="button">Link a pagina 2</a>
+      </section>
+      <hr>
+
+      <section id="paginaDos" class="bg-success name">
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <p> soy la section de la pagina 2 </p>
+        <a class="btn btn-primary next-2 next"  href="#paginaTres" role="button">Link a pagina 3</a>
+      </section>
+      <hr>
+      <section id="paginaTres" class="bg-success name">
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+        <p> soy la section de la pagina 3 </p>
+      </section>
+
+</div>
