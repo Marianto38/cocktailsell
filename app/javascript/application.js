@@ -2,6 +2,12 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+// In your application.js (for example)
+// import 'swiper/swiper-bundle.min.css'
 
+  // // import Swiper JS
+  // import Swiper from 'swiper';
+  // // import Swiper styles
+  // import 'swiper/css';
 
-
+  // const swiper = new Swiper();
