@@ -27,6 +27,10 @@ nextBtnFirst.addEventListener("click", function(event){
   progressText[current - 1].classList.add("active");
   current += 1;
   console.log(location.href)
+  // paginaUno.href;
+  // Location.href=location.href
+  // nextPage.classList.add("active")
+
 });
 nextBtnSec.addEventListener("click", function(event){
   // event.preventDefault();

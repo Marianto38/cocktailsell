@@ -1,9 +1,14 @@
 <%= content_tag :div, class: "nested-fields", data: { new_record: f.object.new_record? } do %>
-  <div class="">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-    <small><%= link_to "Remove", "#", data: { action: "click->nested-form#remove_association" } %></small>
+  <div class="row align-items-center">
+    <div class="col-8">
+      <!-- <%= f.label :"Ingrediente:" %> -->
+      <%= f.text_field :name, class: 'form-control', placeholder: "Ingrese Nombre de ingrediente" %>
+    </div>
+    <div class="col-3">
+      <%= link_to "#", data: { action: "click->nested-form#remove_association" } do %>
+            <i class="fa-solid fa-trash-can fs-4"></i>
+            <%= f.hidden_field :_destroy %>
+          <% end %>
+      <% end %>
+    </div>
   </div>
-
-  <%= f.hidden_field :_destroy %>
-<% end %>
