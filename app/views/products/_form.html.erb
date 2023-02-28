@@ -1,9 +1,8 @@
 <div class="container col-sm-6 col-md-7">
-  <div class="principal-form"
-    data-controller="form">
-    <div class="container">
+  <div class="principal-form" data-controller="form">
+    <div class="container ">
       <!-- <header>Signup Form</header> -->
-      <div class="progress-bar ">
+      <div class="progress-bar  bg-dark">
         <div class="step">
           <p>
             Name
@@ -46,59 +45,108 @@
 
 
 
-      <section id="" class="bg-success name">
-        <p> soy la section de la pagina 0 </p>
-        <p> soy la section de la pagina 0 </p>
-        <p> soy la section de la pagina 0 </p>
-        <p> soy la section de la pagina 0 </p>
-        <p> soy la section de la pagina 0 </p>
-        <p> soy la section de la pagina 0 </p>
 
-        <a class="btn btn-primary firstNext next"  href="#paginaUno" role="button">Link a pagina 1</a>
+    <main>
+      <%= simple_form_for(@product) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <section id="paginaCero" class="bg-success name">
+        <div class="row align-items-center" style="height: 400px;">
+          <div class="col">
+            <div class="">
+              <div class=" text-center p-0 mx-5 border-img-photo">
+                <%= f.input :photo, input_html: { class: 'd-none ' }, label_html: { class: 'upload-photo photo-p text-center p-0 mt-0 mb-0'}, label: '📸' %>
+                <p class="text-center mt-0">Adjuntar imagen</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-inputs p-5">
+              <%= f.input :name %>
+              <%= f.input :price, input_html: { type: 'decimal' } %>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <a class="btn btn-primary firstNext next" href="#paginaUno" role="button">Link a pagina 1</a>
+        </div>
+
       </section>
       <hr>
 
       <section id="paginaUno" class="bg-success name">
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
-        <p> soy la section de la pagina 1 </p>
+          <div class="row p-1 rounded-5 g-2 mb-3 text-light justify-content-center" style="height: 400px;">
+            <h4 class="text-center mt-3 mb-3">Categorias</h4>
+            <div class="col-12 col-md-5  p-2">
+              <h4 class="text-center mt-3 mb-3">Tipo de Coctel</h4>
+                 <%= f.input :category,
+                              as: :radio_buttons,
+                              collection_wrapper_tag: 'div',
+                              collection_wrapper_class: 'category-wrapper',
+                              item_wrapper_class: 'category-item',
+                              input_html: {class: 'category-selector'},
+                              collection: Product.categories.keys %>
+            </div>
+
+            <div class="col-12 col-md-5  p-2 text-center">
+              <h4 class="text-center mt-3 mb-3">Tipo de Licor</h4>
+              <%= f.input :subcategory,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item',
+                  collection: Product.subcategories.keys %>
+            </div>
+          </div>
+       <p> soy la section de la pagina 1 </p>
+
+        <a class="btn btn-primary prev-1 prev"  href="#paginaCero" role="button">Link a pagina 2</a>
         <a class="btn btn-primary next-1 next"  href="#paginaDos" role="button">Link a pagina 2</a>
       </section>
       <hr>
 
       <section id="paginaDos" class="bg-success name">
+
+          <div data-controller="nested-form">
+            <div class="row justify-content-center" style="height: 400px;">
+              <div class="col-6">
+                <h4 class="text-center">ingredientes</h4>
+                <template data-target="nested-form.template">
+                    <%= f.fields_for :ingredients, Ingredient.new, child_index: 'NEW_RECORD' do |ingredient| %>
+                      <%= render "ingredient_fields", f: ingredient %>
+                    <% end %>
+                  </template>
+
+                    <%= f.fields_for :ingredients do |ingredient| %>
+                      <%= render "ingredient_fields", f: ingredient %>
+                    <% end %>
+
+                <div class="mb-3 mt-3" data-target="nested-form.links">
+                  <%= link_to "Add ingredient", "#", class: "btn btn-outline-primary", data: { action: "click->nested-form#add_association" } %>
+                </div>
+             </div>
+            </div>
+          </div>
+
         <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
-        <p> soy la section de la pagina 2 </p>
+        <a class="btn btn-primary prev-2 prev"  href="#paginaUno" role="button">Link a pagina 2</a>
         <a class="btn btn-primary next-2 next"  href="#paginaTres" role="button">Link a pagina 3</a>
       </section>
       <hr>
       <section id="paginaTres" class="bg-success name">
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
-        <p> soy la section de la pagina 3 </p>
+        <div class="row" style="height: 400px;">
+          <p> soy la section de la pagina 3 </p>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, input_html: {class: "submit" } %>
+        </div>
+          <% end %>
+
+        <a class="btn btn-primary prev-3 prev"  href="#paginaDos" role="button">Link a pagina 2</a>
+         <a class="btn btn-primary submit"  href="" role="button"> Submit</a>
       </section>
+    </main>
 
 </div>
