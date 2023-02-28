@@ -61,10 +61,19 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="form-inputs p-5">
+          <div class="col p-5">
+            <div class="form-inputs">
               <%= f.input :name %>
               <%= f.input :price, input_html: { type: 'decimal' } %>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <p>Status de Producto </p>
+              </div>
+              <div class="col-4">
+                <%= f.input :status, as: :boolean, input_html: { class: "toggle" } %>
+              </div>
+
             </div>
 
           </div>
