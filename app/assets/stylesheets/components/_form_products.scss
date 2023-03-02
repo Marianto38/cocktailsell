@@ -10,8 +10,12 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: #040404;
+    // background-color: #1F1D2C;
   // overflow: hidden;
-  background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
+  // background-image: linear-gradient(270deg, #F40968 0%, #FDEA2E 100%);
+  // background-image: url("https://images.unsplash.com/photo-1560512823-829485b8bf24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvY2t0YWlsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  // background-size: cover;
 }
 ::selection{
   color: #fff;
@@ -36,6 +40,9 @@ body {
 
 }
 
+* div body main .a #ovh {
+  overflow: hidden !important;
+ }
 
 form .page .field button{
   width: 100%;
@@ -66,6 +73,7 @@ form .page .btns button.next{
   display: flex;
   // margin: 25px 0;
   user-select: none;
+  position: sticky !important;
 }
 .container .progress-bar .step{
   text-align: center;
@@ -161,13 +169,13 @@ form .page .btns button.next{
   padding: 5px;
 }
 .container .progress-head {
-  // position: fixed;
-  // position: sticky;
+  position: sticky !important;
   // top: 20px;
 }
 .name {
-  min-height: 80vh;
-  padding: 10px;
+  min-height: 100vh;
+  height: 500px;
+  // padding: 10px;
 }
 
 
@@ -278,7 +286,7 @@ background-color: rgb(138, 153, 165);
 }
 
 .photo-p {
-font-size: 100px;
+font-size: 80px;
 padding: 0px;
 margin: 0;
 /* background-image: url(../assets/up-img.png);
@@ -339,3 +347,24 @@ background-size: 100%; */
 // .form-check-input.is-valid ~ .form-check-label {
 //   color: darkblue;
 // }
+// .form-control {
+//   font-size: 8px;
+// }
+
+
+
+// .nav-progress .sticky-top {
+//   margin-top: 50px;
+// }
+
+.name .ingredient-sect {
+  margin-top: 80px;
+}
+.name .recipe-sect {
+  margin-top: 90px;
+  margin-bottom: 15px;
+}
+
+body main .over-h {
+  overflow-y: scroll !important;
+}
