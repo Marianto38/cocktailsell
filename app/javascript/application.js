@@ -11,3 +11,5 @@ import "bootstrap"
   // import 'swiper/css';
 
   // const swiper = new Swiper();
+import "trix"
+import "@rails/actiontext"
