@@ -1,18 +1,13 @@
-<div class="back-btn mb-0 mt-0 ms-5">
-  <%= link_to  :back do%>
-      <i class="fa-solid fa-circle-arrow-left  text-info fs-3 " class="back-btn rounded-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Go Back"></i>
-  <% end %>
-</div>
 
-<p style="color: green"><%= notice %></p>
+  <div class="row back-btn mb-0 mt-3 pb-0 ms-5">
+    <%= link_to  :back do%>
+        <i class="fa-solid fa-circle-arrow-left  text-info fs-3 " class="back-btn rounded-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Go Back"></i>
+    <% end %>
+  </div>
 
-<div class="py-2">
-              <%= render partial: 'product_show', object: @product %>
-</div>
+  <p style="color: green"><%= notice %></p>
 
-<div>
-  <% if current_user %>
-    <%= link_to "Edit this product", edit_product_path(@product) %>
-    <%= button_to "Destroy this product", @product, method: :delete %>
-  <% end %>
-</div>
+  <div class="" data-controller="">
+                <%= render partial: 'product_show', object: @product %>
+  </div>
+  </div>
