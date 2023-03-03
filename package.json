@@ -6,6 +6,7 @@
     "@hotwired/turbo-rails": "^7.2.5",
     "@popperjs/core": "^2.11.6",
     "@rails/actiontext": "^7.0.4-2",
+    "autonumeric": "^4.6.0",
     "bootstrap": "^5.2.3",
     "stimulus-rails-nested-form": "^4.1.0",
     "sweetalert": "^2.1.2",

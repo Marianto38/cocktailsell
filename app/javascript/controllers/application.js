@@ -21,3 +21,5 @@ export { application }
 
 // const application = Application.start()
 // application.register("carousel", Carousel)
+//= require jquery
+//= require autonumeric

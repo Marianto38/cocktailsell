@@ -137,6 +137,20 @@
   transform: rotate(-90deg);
   width: 400px;
 }
+.form-bg-1 {
+  right: -140px;
+  top: 150px;
+  z-index: -1;
+  // transform: rotate(-45deg);
+  width: 400px;
+}
+.form-bg-2 {
+  right: 1100px;
+  top: 100px;
+  width: 300px;
+  z-index: -1;
+  // transform: rotate(-90deg);
+}
 .container-form-login {
   background: #161616;
   border-radius: 2px;
