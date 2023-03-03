@@ -13,12 +13,9 @@
           <h5 class="card-title"><%= link_to product_path(product), class: "text-decoration-none fw-bold text-info" do %>
           <h5 class="mt-3 "><%= (product.name).capitalize %></h5>
          <% end %>
-         <span class="badge rounded-pill bg-dark"><%= product.category %></span>
-            <span class="badge rounded-pill bg-dark"><%= product.subcategory %></span>
+         <span class="badge rounded-pill bg-dark fw-lighter"><%= product.category %></span>
+            <span class="badge rounded-pill bg-dark fw-lighter"><%= product.subcategory %></span>
           <p class="card-text fs-6 pt-5 d-flex justify-content-end me-5"><%= number_to_currency(product.price) %></p>
-          <!-- <p class="card-text fs-6 mt-3"><% product.ingredients.all.each do |ingredient| %>
-          <%= ingredient.name %> </p>
-          <% end %></p> -->
         </div>
       </div>
     </div>
