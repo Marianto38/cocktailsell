@@ -78,11 +78,11 @@
   color: #F4F4F4;
 }
 .c {
-  right: 0px;
-  top: 1300px;
-  width: 550px;
+  right: -125px;
+  top: 1666px;
+  width: 300px;
   z-index: -1;
-  transform: rotate(-180deg);
+  // transform: rotate(90deg);
 }
 .container-form {
   /* position: relative; */
@@ -138,16 +138,38 @@
   width: 400px;
 }
 .form-bg-1 {
-  right: -140px;
-  top: 150px;
+  right: -50px;
+  top: 250px;
   z-index: -1;
   // transform: rotate(-45deg);
-  width: 400px;
+  width: 300px;
 }
 .form-bg-2 {
   right: 1100px;
   top: 100px;
   width: 300px;
+  z-index: -1;
+  // transform: rotate(-90deg);
+}
+.form-bg-3 {
+  right: 1100px;
+  top: 1000px;
+  width: 300px;
+  z-index: -1;
+  // transform: rotate(-90deg);
+}
+
+.form-bg-4 {
+  right: 70px;
+  top: 900px;
+  width: 200px;
+  z-index: -1;
+
+}
+.form-bg-5 {
+  right: -80px;
+  top: 1500px;
+  width: 1400px;
   z-index: -1;
   // transform: rotate(-90deg);
 }
@@ -157,35 +179,13 @@
   backdrop-filter: blur(20px);
   background: rgba(6, 6, 6, 0.05);
 }
-.espiga1 {
-  transform: rotate(180deg);
-  max-width: 70%;
-}
-.espiga {
-  max-width: 70%;
-}
+
 .container-card-product {
   background: #161616;
   border-radius: 15px;
   backdrop-filter: blur(20px);
   background: rgba(6, 6, 6, 0.05);
   box-shadow: 0 4px 30px rgba(249, 249, 247, 0.1);
-}
-.img-cart {
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("assets/harina8.jpg");
-  background-size: cover;
-}
-.container-cart {
-  background: #161616;
-  border-radius: 15px;
-  backdrop-filter: blur(20px);
-  background: rgba(6, 6, 6, 0.05);
-  box-shadow: 0 4px 30px rgba(249, 249, 247, 0.1);
-  max-height: 500px;
-}
-.quantity-cart {
-  right: 3px;
-  top: 20px;
 }
 
 .back-btn{
@@ -195,10 +195,6 @@
   transform: scale(1.010);
 }
 
-// img, svg .espiga {
-//   vertical-align: middle;
-//   max-height: 100px;
-// }
 .bg-glass {
   background: #161616;
   backdrop-filter: blur(20px);

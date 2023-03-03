@@ -34,7 +34,7 @@
     </div>
   </div>
 </div> -->
-<div class="navbar navbar-expand-sm navbar-dark sticky-top bg-glass navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark bg-glass navbar-lewagon">
   <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,8 +44,10 @@
       <%= cl_image_tag("https://res.cloudinary.com/dgktx5c4x/image/upload/v1677259144/gracialogo-removebg-preview_kvabbj.png",
                         width: 70, height: 70, crop: :fill) %>
     <% end %> -->
-
-    <img src="assets/favicon.png" alt="" style="height: 60px; width: 60px;"  class="p-0 m-0">
+    <%= link_to "/", class: "" do %>
+    <div class="neon-2 fs-1">CocktailSell</div>
+    <% end %>
+    <!-- <img src="assets/favicon.png" alt="" style="height: 60px; width: 60px;"  class="p-0 m-0"> -->
   </ul>
 
       <ul class="navbar-nav collapse navbar-collapse">
@@ -74,7 +76,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/duc3wvxve/image/upload/v1677801922/user_ye0xhw.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://res.cloudinary.com/duc3wvxve/image/upload/v1677856873/avatar_ec74ma.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end rounded-4 p-2" aria-labelledby="navbarDropdown">
               <%= link_to products_path, class: "dropdown-item" do %>
                 <i class="fa-solid fa-cart-shopping"></i>

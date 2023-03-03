@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
 
-  addItem(event){
+  addProduct(event){
 
     if (this.redirect) return;
 
@@ -20,7 +20,7 @@ export default class extends Controller {
       title: "hola",
       title:  this.titleValue + "  " + "Se creó nuevo producto",
       showConfirmButton: false,
-      timer: 1500
+      timer: 100
     })
   }
 
