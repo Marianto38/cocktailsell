@@ -71,8 +71,8 @@
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-          <section id="paginaCero" class="name mb-5">
-            <div class="row align-items-center justify-content-center py-5 mt-0" >
+          <section id="paginaCero" class="name">
+            <div class="row align-items-center justify-content-center pb-5 mt-0" >
               <div class="col">
                 <div class="">
 
@@ -109,9 +109,11 @@
             </div>
           </section>
 
+
           <section id="paginaUno" class="name my-5">
+            <hr class="mt-5 mt-5">
               <div class="row p-1 rounded-5 g-2 text-light justify-content-center align-items-center my-5" >
-                <div class="neon-2">Selecionar Categorias</div>
+                <div class="neon-2 mt-5">Selecionar Categorias</div>
                 <!-- <h4 class="text-center text-primary mt-3 mt-md-5 mb-sm-3 py-md-5 fs-2">Selecionar Categorias</h4> -->
                 <div class="col-12 col-md-5  p-2">
                   <h4 class="text-center mt-md-3 mb-3">Tipo de Coctel</h4>
@@ -142,7 +144,7 @@
 
               <div data-controller="nested-form">
                 <div class="row justify-content-center" >
-                  <div class="neon-2">Indicar Igredientes</div>
+                  <div class="neon-2 mt-5 ">Indicar Igredientes</div>
                   <!-- <h4 class="text-center text-primary ingredient-sect fs-2">Indicar Igredientes</h4> -->
                   <div class="col px-3" style="height: 430px; overflow-y:scroll">
                     <template data-target="nested-form.template">

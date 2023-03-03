@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   # belongs_to :user
   has_many :ingredients, inverse_of: :product
+  has_many :ingredients, dependent: :destroy
   has_one_attached :photo
   has_rich_text :content
 
@@ -9,5 +10,5 @@ class Product < ApplicationRecord
 
   accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
 
-  validates :name, :category, :recipe, presence: true
+  validates :name, :photo, :category, :recipe, presence: true
 end

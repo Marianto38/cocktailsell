@@ -7,7 +7,7 @@
               <% if @product.photo.attached?  %>
               <%= cl_image_tag @product.photo.key, height: 300, width: 280, crop: :fill, class:"r-img" %>
               <% else %>
-            <img src="assets/favicon.png" class="img-fluid rounded-start" alt="...">
+            <img src="../assets/copa-rosa.png" class="img-fluid rounded-start" alt="IMAGEN", style="width: 200px;" >
             <% end %>
           </div>
           <div class="col-lg-7 ">
@@ -55,7 +55,7 @@
                   <% if current_user %>
                   <div class="col-lg-2 text-end">
 
-                      <%= link_to products_path, class: "text-decoration-none link-dark", data: { turbo_method: :delete, controller: 'sweetalert', action: "click->sweetalert#show", sweetalert_title_value: @product.id } do %>
+                      <%= link_to products_path, class: "text-decoration-none link-dark", data: { turbo_method: :delete, controller: 'sweetalert', action: "click->sweetalert#show", sweetalert_title_value: @product.name } do %>
                       <i class="fa-solid fa-trash-can rounded-5 p-2 bg-warning"></i>
                          <% end %>
 

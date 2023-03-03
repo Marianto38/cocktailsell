@@ -6,6 +6,7 @@ export default class extends Controller {
   static values = { title: String }
 
   connect(){
+    console.log("sweetalert")
     this.redirect = false;
   }
 
