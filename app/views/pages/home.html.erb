@@ -14,15 +14,28 @@
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner" >
-          <div class="container-02">
+          <div class="bg-carrusel">
 
           </div>
 
           <div class="carousel-item active" data-bs-interval="10000">
             <div class="carousel-caption d-none d-md-block">
-              <div class="row">
+              <div class="row align-items-center">
                 <div class="col-6">
-                  <img class="rounded-1" src="https://i.pinimg.com/564x/cd/16/e0/cd16e0749746ea613394adb9c5aa3164.jpg" style="max-height: 300px;"  alt="">
+                  <img class="rounded-1" src="/assets/coctel-1.png" style="max-height: 350px;"  alt="">
+                </div>
+                <div class="col-6 align-center">
+                  <h5 class="text-light"> <strong>En CocktailSell</strong> </h5>
+                  <p class="text-light">Acompañamos cada momento especial</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="row align-items-center">
+                <div class="col-6 align-center">
+                  <img class="rounded-1" src="assets/corona.png" style="max-height: 350px;"  alt="">
                 </div>
                 <div class="col-6 align-center">
                   <h5 class="text-light">First slide label</h5>
@@ -31,24 +44,11 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="row">
-                <div class="col-6">
-                  <img class="rounded-1" src="https://i.pinimg.com/564x/1c/f4/92/1cf492b99d0c9f301670cf14748f73f8.jpg" style="max-height: 300px;"  alt="">
-                </div>
-                <div class="col-6">
-                  <h5 class="text-light">First slide label</h5>
-                  <p class="text-light">Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="carousel-item">
             <div class="carousel-caption d-none d-md-block">
-              <div class="row">
+              <div class="row align-items-center">
                 <div class="col-6">
-                  <img class="rounded-1" src="https://i.pinimg.com/564x/1c/f4/92/1cf492b99d0c9f301670cf14748f73f8.jpg" style="max-height: 300px;"  alt="">
+                  <img class="rounded-1" src="assets/wine.png" style="max-height: 380px;"  alt="">
                 </div>
                 <div class="col-6">
                   <h5 class="text-light">First slide label</h5>
@@ -59,12 +59,12 @@
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden ">Next</span>
         </button>
       </div>
 
@@ -80,10 +80,10 @@
         </figure>
       </div>
 
-      <div class="row justify-content-center mb-5">
-       <span class="d-flex justify-content-center"> <button type="button" class="btn btn-info  ps-5 pe-5 rounded-pill">Info</button> </span>
+      <div class="text-center">
+       <!-- <span class="d-flex justify-content-center"> <button type="button" href="/products" class="btn btn-info  ps-5 pe-5 rounded-pill">Info</button> </span> -->
+       <%= link_to 'Ver Productos', products_path, class:"btn btn-primary rounded-5 px-3" %>
       </div>
-
 
  <!-- cards de productos -->
 
@@ -101,8 +101,8 @@
         </figure>
       </div>
 
-      <div class="row justify-content-center">
-       <span class="d-flex justify-content-center"> <button type="button" class="btn btn-info  ps-5 pe-5 rounded-pill">Info</button> </span>
+      <div class="text-center mx-3">
+        <%= link_to 'Ver Productos', products_path, class:"btn btn-primary rounded-5 px-3" %>
       </div>
 
       <hr>
@@ -161,7 +161,7 @@
             <div class="form-group">
               <textarea placeholder="Your Message" class="form-control" name="message" rows="4" required></textarea>
             </div>
-           <span class="d-flex justify-content-end"> <button type="submit" class="btn btn-lg btn-info ps-5 pe-5 mb-3 mt-3 text-center"> <span class="pe-2 fs-6"> Send Message  </span> <i class="pt-1 opacity-75 fa-solid fa-paper-plane"></i> </button> </span>
+           <span class="d-flex justify-content-end"> <button type="submit" class="btn btn-lg btn-primary ps-5 pe-5 mb-3 mt-3 text-center"> <span class="pe-2 fs-6"> Send Message  </span> <i class="pt-1 opacity-75 fa-solid fa-paper-plane"></i> </button> </span>
           </form>
         </div>
 

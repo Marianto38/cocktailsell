@@ -13,3 +13,6 @@ import "bootstrap"
   // const swiper = new Swiper();
 import "trix"
 import "@rails/actiontext"
+//= require jquery
+//= require autonumeric
+

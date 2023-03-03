@@ -1,9 +1,48 @@
 import { Controller } from "@hotwired/stimulus"
+//import AutoNumeric from 'AutoNumeric';
+import './add_jquery'
 
 // Connects to data-controller="form"
 export default class extends Controller {
   connect() {
-    console.log("holaaa");
+    console.log("escucha");
+
+    $(".number").on({
+      "focus": function(event) {
+        $(event.target).select();
+      },
+      "keyup": function(event) {
+        $(event.target).val(function(value) {
+          return value.replace(/\D/g, "")
+            .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+            .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+        });
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+  //   new AutoNumeric('.myInput', { currencySymbol : '$' });
+
+  //   const autoNumericOptionsEuro = {
+  //     digitGroupSeparator        : '.',
+  //     decimalCharacter           : ',',
+  //     decimalCharacterAlternative: '.',
+  //     currencySymbol             : '\u202f€',
+  //     currencySymbolPlacement    : AutoNumeric.options.currencySymbolPlacement.suffix,
+  //     roundingMethod             : AutoNumeric.options.roundingMethod.halfUpSymmetric,
+  // };
+
+  // new AutoNumeric(domElement, autoNumericOptionsEuro);
+
+  // anElement = new AutoNumeric(domElement);
 
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");

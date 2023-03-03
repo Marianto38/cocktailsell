@@ -16,5 +16,5 @@ application.register("hello", HelloController)
 import NestedFormController from "./nested_form_controller"
 application.register("nested-form", NestedFormController)
 
-
-
+import SweetalertController from "./sweetalert_controller"
+application.register("sweetalert", SweetalertController)

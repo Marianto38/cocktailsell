@@ -24,7 +24,7 @@ body {
 
 .principal-form .container {
   // width: 370px;
-  background: #162c12;
+  // background: #162c12;
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -83,7 +83,7 @@ form .page .btns button.next{
 .container .progress-bar .step p{
   font-weight: 500;
   font-size: 12px;
-  color: #fff;
+  color: #FCE700;
   margin-bottom: 8px;
 }
 .progress-bar .step .bullet{
@@ -179,6 +179,8 @@ form .page .btns button.next{
 }
 
 
+
+
 // CATEGORIAS
 
 .category-wrapper {
@@ -206,7 +208,7 @@ form .page .btns button.next{
   padding: 20px 20px 20px 20px;
   /* border: 1px solid #EAEAEA; */
   border-radius: 12px;
-  background-color: #262638;
+  // background-color: #262638;
   margin-bottom: 15px;
 }
 
@@ -282,7 +284,11 @@ border-top-right-radius: 30px;
 border-style: dotted;
 color: rgb(11, 10, 10);
 padding: 40px;
-background-color: rgb(138, 153, 165);
+background: #161616;
+backdrop-filter: blur(35px);
+background: rgba(255,255,255,0.05);
+color: #F4F4F4;
+border-radius: 5px;
 }
 
 .photo-p {
@@ -292,6 +298,13 @@ margin: 0;
 /* background-image: url(../assets/up-img.png);
 background-size: 100%; */
 }
+
+.form-control:valid, .form-control.is-valid {
+  border-color: #00C9A7;
+  border-radius: 18px;
+  background-color: whitesmoke;
+}
+
 
 // STATUS
 .toggle {
@@ -359,6 +372,7 @@ background-size: 100%; */
 
 .name .ingredient-sect {
   margin-top: 80px;
+  margin-bottom: 40px;
 }
 .name .recipe-sect {
   margin-top: 90px;

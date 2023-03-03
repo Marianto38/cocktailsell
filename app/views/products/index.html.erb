@@ -1,22 +1,35 @@
-<hr class="border border-info">
 <div class="w-full">
+  <div class="row ">
+    <div class="col back-btn mb-0 mt-3 pb-0 ms-5">
+    <%= link_to  :back do%>
+        <i class="fa-solid fa-circle-arrow-left  text-info fs-3 " class="back-btn rounded-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Go Back"></i>
+    <% end %>
+  </div>
+  <div class="col back-btn mb-0 mt-3 pb-0 me-5 d-flex justify-content-end">
+    <%= link_to  new_product_path do%>
+        <i class="fa-solid fa-plus text-info fs-3" class="back-btn rounded-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar Nuevo Producto"></i>
+    <% end %>
+  </div>
 
-    <div class="row  my-5">
-      <div class="col d-flex justify-content-end">
-        <img class="" src="assets/favicon.png" alt="" style="height: 100px;">
+  </div>
+
+
+    <div class="row justify-content-center mt-1">
+      <div class="col d-flex justify-content-center">
+        <img class="" src="assets/limon-2.png" alt="" style="width: 80px;">
       </div>
-      <div class="col">
-        <h3 class="font-bold text-light text-center">Nuestros Productos</h3>
+      <div class="col d-flex align-items-center text-center">
+        <h4 class="fs-2 text-primary text-center align-bottom"> <strong> Nuestros Productos</strong></h4>
       </div>
-      <div class="col d-flex justify-content-start">
-        <img class="" src="assets/favicon.png" alt="" style="height: 100px;">
+      <div class="col d-flex justify-content-center">
+        <img class="" src="assets/limon-2.png" alt="" style="height: 100px;">
       </div>
     </div>
 
 <!-- cards de productos -->
 
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-1">
+    <div class="row row-cols-1 row-cols-md-3 g-3">
         <% @products.each do |product| %>
               <%= render partial: 'product', object: product %>
           <% end %>
