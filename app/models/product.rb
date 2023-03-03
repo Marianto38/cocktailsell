@@ -9,4 +9,5 @@ class Product < ApplicationRecord
 
   accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
 
+  validates :name, :category, :recipe, presence: true
 end
